@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tb_mult_mnbit;
+module tb_mult_mnbit_signed;
 
     // Parameters for M and N
     parameter M = 4;
@@ -12,7 +12,7 @@ module tb_mult_mnbit;
     logic [M+N-1:0] Prod;
 
     // Instantiate the mult_mnbit module
-    mult_mnbit #(M, N) uut (
+    mult_mnbit_signed #(M, N) uut (
         .A(A),
         .B(B),
         .Prod(Prod)
@@ -21,8 +21,8 @@ module tb_mult_mnbit;
     // Test procedure
     initial begin
         // Test all possible cases for M-bit input A and N-bit input B
-        for (int i = 0; i < 2**M; i++) begin
-            for (int j = 0; j < 2**N; j++) begin
+        for (int i = -7; i < 8; i++) begin
+            for (int j = -4; j < 4; j++) begin
                 // Set inputs
                 A = i;
                 B = j;

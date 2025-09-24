@@ -1,4 +1,4 @@
-module rca_Nbit_co #(parameter N = 4) (
+module rca_nbit_mux #(parameter N = 4) (
     input logic  [N-1:0] a,
     input logic  [N-1:0] b,
     input logic  cin,

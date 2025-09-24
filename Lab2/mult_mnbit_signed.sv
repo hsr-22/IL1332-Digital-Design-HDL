@@ -10,13 +10,13 @@ module mult_mnbit_signed #(parameter M = 4, parameter N = 4) (
     logic a_sign, b_sign, result_sign;
     
     // Extract signs
-    assign a_sign = a[M-1];
-    assign b_sign = b[N-1];
+    assign a_sign = A[M-1];
+    assign b_sign = B[N-1];
     assign result_sign = a_sign ^ b_sign;
     
     // Get absolute values
-    assign a_abs = a_sign ? (~a + 1'b1) : a;
-    assign b_abs = b_sign ? (~b + 1'b1) : b;
+    assign a_abs = a_sign ? (~A + 1'b1) : A;
+    assign b_abs = b_sign ? (~B + 1'b1) : B;
     
     // Unsigned multiplication
     logic [M+N-1:0] unsigned_prod;
@@ -27,6 +27,6 @@ module mult_mnbit_signed #(parameter M = 4, parameter N = 4) (
     );
     
     // Apply sign to result
-    assign product = result_sign ? (~unsigned_prod + 1'b1) : unsigned_prod;
+    assign Prod = result_sign ? (~unsigned_prod + 1'b1) : unsigned_prod;
     
 endmodule
