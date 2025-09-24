@@ -7,7 +7,7 @@ module rca_Nbit_delay #(parameter N = 8) (
     // Internal carry signals
     logic [N:0] C;
 
-    assign C[0] =cin;
+    assign C[0] = cin;
     
     // Generate block to create the N full adders
     genvar i;

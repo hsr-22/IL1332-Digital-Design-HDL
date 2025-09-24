@@ -8,7 +8,7 @@ module rca_Nbit_co #(parameter N = 4) (
     // Internal carry signals
     logic [N:0] C;
 
-    assign C[0] =cin;
+    assign C[0] = cin;
     
     // Generate block to create the N full adders
     genvar i;

@@ -6,7 +6,7 @@ module nand2_delay (
 	output logic y   // Output 
 	); 
 
-// Continuous assignment for XOR gate 
-    assign #1ns y = ~(a & b);  // Perform the XOR operation after the delay
+	// Continuous assignment for NAND gate 
+    assign #1ns y = ~(a & b);  // Perform the NAND operation after the delay
 	
 endmodule
