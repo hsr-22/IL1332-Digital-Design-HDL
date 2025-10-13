@@ -10,12 +10,12 @@ module generate_logic (
 		.a(a), 
 		.b(b), 
 		.y(nand_out)
-		); 
+	); 
 
 	nand2 u2 (
 		.a(nand_out), 
 		.b(nand_out), 
 		.y(g)
-		); 
+	); 
 
 endmodule

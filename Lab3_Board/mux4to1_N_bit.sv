@@ -1,11 +1,11 @@
-module mux4to1_N_bit #(parameter N=4)
-                (   input  logic [N-1:0] A,
-                    input  logic [N-1:0] B,
-                    input  logic [N-1:0] C,
-                    input  logic [N-1:0] D,
-                    input  logic [1:0] sel,
-                    output logic [N-1:0] Y
-                );
+module mux4to1_N_bit #(parameter N=4) (   
+    input  logic [N-1:0] A,
+    input  logic [N-1:0] B,
+    input  logic [N-1:0] C,
+    input  logic [N-1:0] D,
+    input  logic [1:0] sel,
+    output logic [N-1:0] Y
+);
 
 
     // Generate N bit 2-1 mux

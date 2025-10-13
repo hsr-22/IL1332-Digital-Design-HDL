@@ -2,7 +2,7 @@ module mult_mnbit #(parameter M = 4, parameter N = 4) (
     input  logic [M-1:0] A,
     input  logic [N-1:0] B,
     output logic [M+N-1:0] Prod
-    );
+);
 
     logic [N-1:0][M-1:0] prod_terms;
 
